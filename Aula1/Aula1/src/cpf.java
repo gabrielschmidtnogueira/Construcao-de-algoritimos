@@ -1,35 +1,51 @@
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.JOptionPane;
 
 public class cpf {
-    public static void main(String[] args) throws Exception {
+
+    public static void main(String[] args) {
         String cpf = JOptionPane.showInputDialog("Insira o cpf (apenas numeros)");
-        String[] numerosCpf = cpf.split("");
-        int produtosDosDigitos;
-        int teste2;
-        int resultado2;
-        int somaDosProdutos = 0;
-        int restoDaDivisao;
+        int[] numerosCpf = new int[11];
+        int[] numerosBase = new int[9];
+        int[] numerosVeri = new int[2];
 
-        List<Integer> numeros = new ArrayList<>();
+        int soma = 0;
+        int resto = 0;
 
-        for (String numeroCpf : numerosCpf) {
-            numeros.add(Integer.parseInt(numeroCpf));
+        if (cpf.length() != 11) {
+            JOptionPane.showMessageDialog(null, "Digite 11 digitos");
+            return;
+        }
+        for (int i = 0; i < 11; i++) {
+            char digitoChar = cpf.charAt(i);
+            if (Character.isDigit(digitoChar)) {
+                numerosCpf[i] = Character.getNumericValue(digitoChar);
+            } else {
+                JOptionPane.showMessageDialog(null, "por favor insira apenas numeros");
+                return;
+            }
+            // if para separar os digitos bases e os verificadores
+            if (i < 9) {
+                numerosBase[i] = numerosCpf[i];
+            } else {
+                numerosVeri[i - 9] = numerosCpf[i];
+            }
         }
 
-        for (int i = 0; i < numerosCpf.length; i++) {
-            produtosDosDigitos = Integer.parseInt(numerosCpf[8 - i]) * (i + 2);
-            somaDosProdutos += produtosDosDigitos;
-
+        for (int i = 0; i < 9; i++) {
+            soma += numerosBase[i] * (10 - i);
         }
 
-        restoDaDivisao = somaDosProdutos % 11;
+        resto = soma % 11;
 
-        JOptionPane.showMessageDialog(null, "resultado da soma: " + somaDosProdutos);
-        JOptionPane.showMessageDialog(null, "resto da divisao por 11: " + restoDaDivisao);
-        JOptionPane.showMessageDialog(null, "subitrair 11 do resto da divisao: " + (restoDaDivisao - 11));
-
+        if (resto == 0 || resto == 1) {
+            if (numerosVeri[0] != 0) {
+                JOptionPane.showMessageDialog(null, "o 10 digito do cpf é falso");
+            }
+        } else {
+            if (numerosVeri[0] == 11 - resto) {
+                JOptionPane.showMessageDialog(null, "o 10 digito do cpf é verdadeiro");
+            }
+        }
+        JOptionPane.showMessageDialog(null, soma);
     }
 }
