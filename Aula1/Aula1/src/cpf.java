@@ -46,6 +46,22 @@ public class cpf {
                 JOptionPane.showMessageDialog(null, "o 10 digito do cpf é verdadeiro");
             }
         }
+        soma = 0;
+        for (int i = 0; i < 10; i++) {
+            soma += numerosCpf[i] * (11 - i);
+        }
+        resto = soma % 11;
+        if (resto == 0 || resto == 1) {
+            if (numerosVeri[1] != 0) {
+                JOptionPane.showMessageDialog(null, "o 11 digito do cpf é falso");
+            }
+        } else {
+            if (numerosVeri[0] == 11 - resto) {
+                JOptionPane.showMessageDialog(null, "o 11 digito do cpf é verdadeiro");
+            } else {
+                JOptionPane.showMessageDialog(null, "o 11 digito do cpf é falso");
+            }
+        }
         JOptionPane.showMessageDialog(null, soma);
     }
 }

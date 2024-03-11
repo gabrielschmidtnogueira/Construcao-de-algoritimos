@@ -1,0 +1,110 @@
+Cálculo do primeiro dígito verificador:
+Multiplique cada um dos 9 primeiros dígitos, da esquerda para a direita, por uma sequência decrescente de números de 10 a 2.
+Some os resultados das multiplicações.
+O resto da divisão da soma por 11 deve ser igual ao primeiro dígito verificador. Se o resto for 0 ou 1, o dígito verificador é igual a 0. Se o resto for de 2 a 10, o dígito verificador é 11 menos o resto.
+Cálculo do segundo dígito verificador:
+Multiplique cada um dos 9 primeiros dígitos, mais o primeiro dígito verificador, por uma sequência decrescente de números de 11 a 2.
+Some os resultados das multiplicações.
+O resto da divisão da soma por 11 deve ser igual ao segundo dígito verificador. Se o resto for 0 ou 1, o dígito verificador é igual a 0. Se o resto for de 2 a 10, o dígito verificador é 11 menos o resto.
+
+1 x 10 = 10
+4 x 9 = 36
+5 x 8 = 40
+3 x 7 = 21
+8 x 6 = 48
+2 x 5 = 10
+2 x 4 = 8
+0 x 3 = 0
+6 x 2 = 12
+14538220620
+
+10+9+8...=55
+
+
+=185
+185 % 11 = 9
+11-9=2
+
+
+2
+0
+
+1 x 11
+4 x 10
+5 x 9
+3 x 8
+8 x 7
+2 x 6
+2 x 5
+0 x 4
+6 x 3
+2 x 2
+
+11 + 40 + 45 + 24 + 56 + 12 + 10 + 0 + 18 + 4 = 220
+220%11=0
+
+
+1 * 10 = 10
+4 * 9 = 36
+x * 8 = y
+3 * 7 = 21
+8 * 6 = 48
+2 * 5 = 10
+2 * 4 = 8
+0 * 3 = 0
+6 * 2 = 12
+
+=145 (145+y=resultado)
+145 % 11 = 2
+11-2=9
+
+1 * 10 = 10
+4 * 9 = 36
+5 * 8 = 40
+x * 7 = 7x
+8 * 6 = 48
+2 * 5 = 10
+2 * 4 = 8
+0 * 3 = 0
+6 * 2 = 12
+
+=164 (164+7x=resultado)
+resultado=164+7x
+
+se primeiro digito verificador = 2 entao 11-resto=2 entao resto = 11-2 
+resto = 9
+
+x/11=y
+x-11*y=9
+x-11*y-9=0
+
+x-11y-9=0*-1
+x/11-y=0
+-x+11y+9=0
+
+11y+9+11-y=0
+11y=20-y
+10y=20
+y=20/10 = 2
+
+logo
+1 * 11 = 11
+4 * 10 = 40
+5 * 9 = 45
+x * 8 = 8x
+8 * 7 = 56
+2 * 6 = 12
+2 * 5 = 10
+0 * 4 = 0
+6 * 3 = 18
+2 * 2 = 4
+
+soma tudo = 196
+
+196+8x=resultado1
+resultado1%11
+se ultimo digito = 0
+entao resultado1%11=0 ou resultado1%11=1 ou resultado1%11=11
+
+
+https://www.mindomo.com/mindmap/3ab95a21f71c43f280e7425a4b1a8a1a
