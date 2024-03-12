@@ -46,9 +46,7 @@ public class descobrirDigitos {
         for (int i = 0; i < digitoVeri; i++) {
             soma += digitosCpf[i] * (digitoVeri - i);
         }
-        JOptionPane.showMessageDialog(null, soma);
         resto = soma % 11;
-        JOptionPane.showMessageDialog(null, resto);
         if (resto < 2) {
             numeroVeri = 0;
         } else {
