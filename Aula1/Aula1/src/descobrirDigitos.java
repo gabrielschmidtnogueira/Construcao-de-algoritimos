@@ -10,8 +10,10 @@ public class descobrirDigitos {
 
         posLetra = ProcessaCpf(cpf, numerosCpf);
 
-        if (posLetra >= 9) {
-            numerosCpf[posLetra] = UltimosDigitos(numerosCpf, posLetra);
+        if (posLetra == 9) {
+            numerosCpf[posLetra] = UltimosDigitos(numerosCpf, posLetra, 10);
+        } else if (posLetra == 10) {
+            numerosCpf[posLetra] = UltimosDigitos(numerosCpf, posLetra, 11);
         }
 
         for (int i = 0; i < numerosCpf.length; i++) {
@@ -36,20 +38,23 @@ public class descobrirDigitos {
         return posLetra;
     }
 
-    public static int UltimosDigitos(int[] digitosCpf, int posLetra) {
+    public static int UltimosDigitos(int[] digitosCpf, int posLetra, int digitoVeri) {
         int resto = 0;
         int soma = 0;
         int numeroVeri;
-        for (int i = 0; i <= posLetra; i++) {
-            soma += digitosCpf[i] * posLetra + 1 - i;
+
+        for (int i = 0; i < digitoVeri; i++) {
+            soma += digitosCpf[i] * (digitoVeri - i);
         }
+        JOptionPane.showMessageDialog(null, soma);
         resto = soma % 11;
+        JOptionPane.showMessageDialog(null, resto);
         if (resto < 2) {
             numeroVeri = 0;
         } else {
             numeroVeri = 11 - resto;
         }
-        numeroVeri = 11 - resto;
+
         return numeroVeri;
     }
 }
