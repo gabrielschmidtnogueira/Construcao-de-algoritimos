@@ -14,12 +14,22 @@ public class descobrirDigitos {
             numerosCpf[posLetra] = UltimosDigitos(numerosCpf, posLetra, 10);
         } else if (posLetra == 10) {
             numerosCpf[posLetra] = UltimosDigitos(numerosCpf, posLetra, 11);
+        } else {
+            numerosCpf[posLetra] = primeirosDigitos(numerosCpf, posLetra);
         }
 
         for (int i = 0; i < numerosCpf.length; i++) {
-            cpfCompleto += numerosCpf[i];
+            if (i == 3 || i == 6) {
+                cpfCompleto += ".";
+                cpfCompleto += numerosCpf[i];
+            } else if (i == 9) {
+                cpfCompleto += "-";
+                cpfCompleto += numerosCpf[i];
+            } else {
+                cpfCompleto += numerosCpf[i];
+            }
         }
-        JOptionPane.showMessageDialog(null, cpfCompleto);
+        JOptionPane.showMessageDialog(null, "o cpf completo é: " + cpfCompleto);
 
     }
 
@@ -54,5 +64,25 @@ public class descobrirDigitos {
         }
 
         return numeroVeri;
+    }
+
+    public static int primeirosDigitos(int[] digitosCpf, int posLetra) {
+        int soma = 0;
+        int resultado = 0;
+        int resto;
+        int peso = 10 - posLetra;
+        for (int i = 0; i < 9; i++) {
+            soma += digitosCpf[i] * (10 - i);
+        }
+        resto = 11 - digitosCpf[9];
+
+        for (int i = 0; i <= 9; i++) {
+            resultado = soma + (peso * i);
+            if (resultado % 11 == resto) {
+                return i;
+            }
+        }
+
+        return -1;
     }
 }
