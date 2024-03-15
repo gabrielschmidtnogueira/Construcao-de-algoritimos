@@ -18,7 +18,6 @@ O resto da divisão da soma por 11 deve ser igual ao segundo dígito verificador
 6 x 2 = 12
 14538220620
 
-10+9+8...=55
 
 
 =185
