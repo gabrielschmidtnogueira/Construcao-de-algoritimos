@@ -16,11 +16,10 @@ public class descobrirDigitos {
             numerosCpf[posLetra] = UltimosDigitos(numerosCpf, posLetra, 11);
         } else {
             if (numerosCpf[9] == 0) {
-                numerosCpf[posLetra] = veriZero(numerosCpf, posLetra);
+                numerosCpf[posLetra] = primeirosDigitos(numerosCpf, posLetra, 11);
             } else {
-                numerosCpf[posLetra] = primeirosDigitos(numerosCpf, posLetra);
+                numerosCpf[posLetra] = primeirosDigitos(numerosCpf, posLetra, 10);
             }
-
         }
 
         for (int i = 0; i < numerosCpf.length; i++) {
@@ -71,43 +70,25 @@ public class descobrirDigitos {
         return numeroVeri;
     }
 
-    public static int primeirosDigitos(int[] digitosCpf, int posLetra) {
+    public static int primeirosDigitos(int[] digitosCpf, int posLetra, int digitoVeri) {
         int soma = 0;
         int resultado = 0;
         int resto;
-        int peso = 10 - posLetra;
-        for (int i = 0; i < 9; i++) {
-            soma += digitosCpf[i] * (10 - i);
+        int peso = digitoVeri - posLetra;
+        
+        for (int i = 0; i < digitoVeri - 1; i++) {
+            soma += digitosCpf[i] * (digitoVeri - i);
         }
-        resto = 11 - digitosCpf[9];
+        resto = 11 - digitosCpf[digitoVeri - 1];
 
-        for (int i = 0; i <= 9; i++) {
+        for (int i = 0; i < digitoVeri - 1; i++) {
             resultado = soma + (peso * i);
             if (resultado % 11 == resto) {
-                return i;
+                return i;  
             }
         }
 
         return -1;
     }
 
-    public static int veriZero(int[] digitosCpf, int posLetra) {
-        int soma = 0;
-        int resultado = 0;
-        int resto;
-        int peso = 11 - posLetra;
-        for (int i = 0; i < 9; i++) {
-            soma += digitosCpf[i] * (11 - i);
-        }
-        resto = 11 - digitosCpf[10];
-
-        for (int i = 0; i <= 10; i++) {
-            resultado = soma + (peso * i);
-            if (resultado % 11 == resto) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
 }
