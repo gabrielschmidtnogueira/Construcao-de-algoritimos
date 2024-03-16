@@ -75,7 +75,7 @@ public class descobrirDigitos {
         int resultado = 0;
         int resto;
         int peso = digitoVeri - posLetra;
-        
+
         for (int i = 0; i < digitoVeri - 1; i++) {
             soma += digitosCpf[i] * (digitoVeri - i);
         }
@@ -84,7 +84,7 @@ public class descobrirDigitos {
         for (int i = 0; i < digitoVeri - 1; i++) {
             resultado = soma + (peso * i);
             if (resultado % 11 == resto) {
-                return i;  
+                return i;
             }
         }
 
