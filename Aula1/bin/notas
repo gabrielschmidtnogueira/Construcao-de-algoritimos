@@ -1,0 +1,8 @@
+Cálculo do primeiro dígito verificador:
+Multiplique cada um dos 9 primeiros dígitos, da esquerda para a direita, por uma sequência decrescente de números de 10 a 2.
+Some os resultados das multiplicações.
+O resto da divisão da soma por 11 deve ser igual ao primeiro dígito verificador. Se o resto for 0 ou 1, o dígito verificador é igual a 0. Se o resto for de 2 a 10, o dígito verificador é 11 menos o resto.
+Cálculo do segundo dígito verificador:
+Multiplique cada um dos 9 primeiros dígitos, mais o primeiro dígito verificador, por uma sequência decrescente de números de 11 a 2.
+Some os resultados das multiplicações.
+O resto da divisão da soma por 11 deve ser igual ao segundo dígito verificador. Se o resto for 0 ou 1, o dígito verificador é igual a 0. Se o resto for de 2 a 10, o dígito verificador é 11 menos o resto.
