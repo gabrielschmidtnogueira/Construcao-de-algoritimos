@@ -1,2 +1,0 @@
-# Construcao de algoritimos
- 
