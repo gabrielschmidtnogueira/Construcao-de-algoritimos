@@ -1,9 +1,11 @@
-import javax.swing.JOptionPane;
+package EstudosEmCasa;
+
+import javax.swing.*;
 
 public class cpf {
     public static void main(String[] args) {
         String cpf = JOptionPane
-                .showInputDialog("Insira o cpf: (coloque um x no digito faltando. Exemplo 123456x8909)");
+                .showInputDialog("Insira o EstudosEmCasa.cpf: (coloque um x no digito faltando. Exemplo 123456x8909)");
         int[] numerosCpf = new int[11];
         int posLetra;
         String cpfCompleto = "";
@@ -33,7 +35,7 @@ public class cpf {
                 cpfCompleto += numerosCpf[i];
             }
         }
-        JOptionPane.showMessageDialog(null, "o cpf completo é: " + cpfCompleto);
+        JOptionPane.showMessageDialog(null, "o EstudosEmCasa.cpf completo é: " + cpfCompleto);
 
     }
 

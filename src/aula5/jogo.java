@@ -15,11 +15,14 @@ public class jogo {
                 JOptionPane.showMessageDialog(null, "você tem " + tentativas + " tentativas");
                 String texto = String.format("Chute um numero entre %d e %d", minimo, maximo);
                 jogada = Integer.parseInt(JOptionPane.showInputDialog(texto));
-                if (jogada < num) {
+
+                if (jogada < num && jogada > minimo) {
                     minimo = jogada;
-                } else {
+                } else if (jogada > num && jogada < maximo) {
                     maximo = jogada;
                 }
+
+
                 tentativas--;
             } else {
                 return 0;
