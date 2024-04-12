@@ -1,8 +1,8 @@
-package aula3;
+package aula6;
 
 import javax.swing.*;
 
-public class diaSemana {
+public class DiaSemana {
     public static void main(String[] args) {
         boolean tudoCerto = false;
         do {
