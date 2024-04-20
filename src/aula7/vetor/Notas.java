@@ -9,7 +9,7 @@ public class Notas {
         int media = 0;
         int notaMaior = 0;
         int alunoMaior = 0;
-        ArrayList<Integer> acimaMedia = new ArrayList<Integer>();
+        ArrayList<Integer> acimaMedia = new ArrayList<>();
 
         for (int i = 1; i < notas.length; i++) {
             notas[i] = Integer.parseInt(JOptionPane.showInputDialog("Insira a nota do aluno " + i));
@@ -23,9 +23,9 @@ public class Notas {
         System.out.println("a media foi " + media);
         System.out.println("a maior nota foi " + notaMaior + " do aluno " + alunoMaior);
 
-        for (int i = 0; i < notas.length; i++) {
-            if (notas[i] > media) {
-                acimaMedia.add(notas[i]);
+        for (int nota : notas) {
+            if (nota > media) {
+                acimaMedia.add(nota);
             }
         }
         System.out.print(acimaMedia);

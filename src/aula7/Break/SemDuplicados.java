@@ -10,13 +10,13 @@ public class SemDuplicados {
             numeros[i] = Integer.parseInt(JOptionPane.showInputDialog("Insira um numero"));
         }
 
-        ArrayList<Integer> semDuplicar = new ArrayList<Integer>();
+        ArrayList<Integer> semDuplicar = new ArrayList<>();
 
-        for (int i = 0; i < numeros.length; i++) {
-            if (semDuplicar.contains(numeros[i])) {
+        for (int numero : numeros) {
+            if (semDuplicar.contains(numero)) {
                 continue;
             }
-            semDuplicar.add(numeros[i]);
+            semDuplicar.add(numero);
         }
         System.out.println(semDuplicar);
     }

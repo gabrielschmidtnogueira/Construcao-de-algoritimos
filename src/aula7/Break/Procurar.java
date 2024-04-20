@@ -16,7 +16,7 @@ public class Procurar {
                 achado = true;
             }
         }
-        if (achado == false) {
+        if (!achado) {
             JOptionPane.showMessageDialog(null, "o numero não foi encontrado");
         }
     }
