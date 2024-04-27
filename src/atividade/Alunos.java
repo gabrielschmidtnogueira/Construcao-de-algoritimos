@@ -1,4 +1,4 @@
-package aula8;
+package atividade;
 
 import javax.swing.*;
 
