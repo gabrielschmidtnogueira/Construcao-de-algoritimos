@@ -1,4 +1,4 @@
-package ExerciciosFixação;
+package ExerciciosFixacao;
 
 import javax.swing.*;
 import java.util.Objects;

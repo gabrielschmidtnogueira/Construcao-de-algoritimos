@@ -1,0 +1,78 @@
+1 - Escreva um programa que informa o signo de alguém. O programa deve
+solicitar os dados necessários.
+2 - O arroz é um alimento muito consumido em várias partes de mundo. Uma
+forma típica de consumir esse cereal é o prato cozido que tem uma receita
+muito simples. Por exemplo para cada xícara de arroz, basta cozinhar com 2
+xícaras de água e ½ colher(chá) de sal que irá render 4 porções. Faça um
+programa que recebe a quantidade de arroz cru e informa a quantidade de
+água e sal necessários e a quantidade porções.
+3 - Crie um programa recebe 10 números do usário e os armazena no array A.
+Deve também solicitar mais um valor que será armazenado na variável q. Por
+fim, o programa deve verificar se q está contido em A.
+4. Escreva um programa que recebe 3 números inteiros e os exibe em ordem
+crescente.
+5- Um determinado material radioativo perde metade de sua massa a cada 10
+segundos. Leia a massa inicial, em gramas, e determine o tempo necessário
+para que a massa se torne menor que 0,5 grama.
+Escreva a massa inicial, a massa final e o tempo.
+6 - Crie um programa que recebe um texto e o exibe sem acentos.
+7- Crie um programa que recebe 12 números e os armazena em uma matriz 4x3,
+em seguida exibe a matriz transposta.
+8 - Crie um programa que recebe um número inteiro e retorna sua
+representação binária.
+9 - ...
+10 - Crie um programa que recebe um array com 10 elementos e exibe todos
+os elementos únicos. Ou seja elementos duplicados deve ser exibidos apenas
+uma vez.
+11 - Crie um programa que recebe um texto e o escreve ao contrário.
+12 - Crie um programa que recebe uma matriz, múltiplica-a por um escalar e
+mostra o resultado.
+13 - Crie uma programa que exibe a sequencia fibonacci.
+14 - Crie um programa que recebe uma frase do usuário e exibe essa frase
+trocando as letras A, E, I e O por 4, 3, 1 e 0.
+Exemplo: "Hoje acordei cedo."
+Fica : "H0j3 4c0rd31 c3d0."
+15 - Escreva um programa que recebe um número inteiro e escreve esse
+número por extenso.
+O programa deve suportar pelo menos os números de 0 a 10. Caso o número
+esteja fora dessa abrangência, informar que esse número não é suportado
+pelo programa.
+16 - Mostre todas as jogadas da Fake Sena.
+O jogador escolhe 3 números entre 1 e 9, com a restrição que não pode
+haver repetição na jogada.
+Exemplo:
+1 2 3
+1 2 4
+1 2 5
+...
+Jogadas repetidas como 1 2 2 e 1 1 2 não são permitidas.
+Jogadas redundantes devem ser evitadas
+por exemplo
+4 8 2
+e
+8 2 4
+17 - Escreva um programa que recebe um texto em seguida um caractere. Ao
+final, o programa deve informar quantos vezes o caractere aparece no
+texto.
+18 - Escreva um programa que recebe um texto em seguida informa quantas
+vogais possui.
+19 - Escreva um programa que recebe 2 números inteiros A e B, cuja divisão
+de A por B gera uma dízima periódica infinita. O programa deve exibir o
+produdo da divisão com 50 dígitos de precisão.
+20 - Receber 3 números e informar se formam uma terna pitagórica
+21 - Mostre todas as jogadas da Fake Sena.
+O jogador escolhe 3 números entre 1 e 9, com a restrição que não pode
+haver repetição na jogada.
+Exemplo:
+1 2 3
+1 2 4
+1 2 5
+...
+Jogadas repetidas como 1 2 2 e 1 1 2 não são permitidas.
+Jogadas redundantes devem ser evitadas
+por exemplo
+4 8 2
+e
+8 2 4
+22 - Em virtude das festas de final de ano, desenhe uma arvore de natal.
+Exemplo:
