@@ -5,30 +5,27 @@ import java.util.Arrays;
 
 public class OrdemCrescente {
     public static void main(String[] args) {
-
-        int[] numeros = new int[3];
+        int[] numeros = new int[10];
         int controle;
+        int j2;
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = Integer.parseInt(JOptionPane.showInputDialog("Insira um numero"));
         }
-        if (numeros[0] > numeros[1]) {
-            controle = numeros[0];
-            numeros[0] = numeros[1];
-            numeros[1] = controle;
-        }
-        if (numeros[1] > numeros[2]) {
-            controle = numeros[1];
-            numeros[1] = numeros[2];
-            numeros[2] = controle;
-        }
-        if (numeros[0] > numeros[1]) {
-            controle = numeros[0];
-            numeros[0] = numeros[1];
-            numeros[1] = controle;
-        }
 
-
-        System.out.println(Arrays.toString(numeros));
+        for (int i = 0; i < numeros.length; i++) {
+            for (int j1 = 0; j1 < numeros.length; j1++) {
+                j2 = j1 + 1;
+                if (j2 >= numeros.length) {
+                    break;
+                }
+                if (numeros[j1] > numeros[j2]) {
+                    controle = numeros[j1];
+                    numeros[j1] = numeros[j2];
+                    numeros[j2] = controle;
+                }
+            }
+            System.out.println(Arrays.toString(numeros));
+        }
 
 
     }
