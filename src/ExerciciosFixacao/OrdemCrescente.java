@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class OrdemCrescente {
     public static void main(String[] args) {
-        int[] numeros = new int[10];
+        int[] numeros = new int[9];
         int controle;
         int j2;
         for (int i = 0; i < numeros.length; i++) {
@@ -24,9 +24,8 @@ public class OrdemCrescente {
                     numeros[j2] = controle;
                 }
             }
-            System.out.println(Arrays.toString(numeros));
         }
-
+        System.out.println(Arrays.toString(numeros));
 
     }
 }

@@ -21,7 +21,7 @@ public class Encontrar {
                 break;
             }
         }
-        if (procurando == true) {
+        if (procurando) {
             JOptionPane.showMessageDialog(null, "Não encontrado");
         }
     }

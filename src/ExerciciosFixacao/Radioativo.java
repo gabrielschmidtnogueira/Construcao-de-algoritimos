@@ -4,7 +4,7 @@ import javax.swing.*;
 
 public class Radioativo {
     public static void main(String[] args) {
-        double massa = Integer.parseInt(JOptionPane.showInputDialog("Insira a massa do elemento (em gramas)"));
+        double massa = Double.parseDouble(JOptionPane.showInputDialog("Insira a massa do elemento (em gramas)"));
         int tempo = 0;
         while (massa > 0.5) {
             massa = massa / 2;
