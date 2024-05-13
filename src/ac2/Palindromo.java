@@ -4,6 +4,11 @@ import javax.swing.*;
 
 public class Palindromo {
     public static void main(String[] args) {
+        /*
+        Crie um programa que recebe uma frase e informa se é ou não é palíndromo.
+        Ponto extra se desconsiderar espaços e não criar nenhuma cópia nem alterar a string.
+        */
+
         char[] texto = JOptionPane.showInputDialog("Insira um texto").toCharArray();
         int quantidadeLetras = texto.length - 1;
         int espacoIr = 0;
