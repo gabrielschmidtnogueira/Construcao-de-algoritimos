@@ -15,6 +15,6 @@ public class Vetor_para_matriz {
                 indice++;
             }
         }
-        Mostrar.mostrar(matrix, 5, 5);
+        Mostrar.mostrar_int(matrix, 5, 5);
     }
 }

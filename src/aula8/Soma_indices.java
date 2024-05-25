@@ -9,7 +9,7 @@ public class Soma_indices {
                 matrix[i][j] = i + j;
             }
         }
-        Mostrar.mostrar(matrix, 10, 10);
+        Mostrar.mostrar_int(matrix, 10, 10);
 
     }
 }

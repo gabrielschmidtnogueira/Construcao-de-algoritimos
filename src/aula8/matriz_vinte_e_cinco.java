@@ -15,7 +15,7 @@ public class matriz_vinte_e_cinco {
             }
         }
 
-        Mostrar.mostrar(matrix, tamanho_matriz, tamanho_matriz);
+        Mostrar.mostrar_int(matrix, tamanho_matriz, tamanho_matriz);
 
         for (int i = 0; i < tamanho_matriz; i++) {
             soma += matrix[i][i];

@@ -11,7 +11,7 @@ public class Matriz_numeros {
             }
         }
 
-        Mostrar.mostrar(matrix, 10, 10);
+        Mostrar.mostrar_int(matrix, 10, 10);
 
     }
 }

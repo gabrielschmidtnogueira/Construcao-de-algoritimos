@@ -1,8 +1,8 @@
 package aula8;
 
-public class Faz_o_L {
+public class Letra_L {
     public static void main(String[] args) {
-        String[][] matrix = new String[5][10];
+        String[][] matrix = new String[5][6];
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 6; j++) {
@@ -14,11 +14,6 @@ public class Faz_o_L {
             }
         }
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 6; j++) {
-                System.out.print(matrix[i][j]);
-            }
-            System.out.println();
-        }
+        Mostrar.mostrar_string(matrix,5,6);
     }
 }
